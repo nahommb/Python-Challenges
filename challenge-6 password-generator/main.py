@@ -1,16 +1,31 @@
-# This is a sample Python script.
+import random
+no_of_letters = int(input("how many letters u want\n"))
+no_of_symbols = int(input('how many symbols u want\n'))
+no_of_numbers = int(input('how many nubers u want\n'))
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+letters = [
+    'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'
+]
+numbers = ['0','1','2','3','4','5','6','7','8','9']
+symbol =['/','@','#','$','%','&']
 
+password = ''
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+for i in range(0,no_of_letters):
 
+    random_let = random.choice(letters)
+    password+=random_let
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+for i in range(0,no_of_symbols):
+    random_symbol = random.choice(symbol)
+    password+=random_symbol
+for i in range(0,no_of_numbers):
+    random_num = random.choice(numbers)
+    password+=random_num
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+char_list = list(password)
+random.shuffle(char_list)
+
+password = ''.join(char_list)
+print(f'your password = {password}')
