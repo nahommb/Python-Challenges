@@ -4,17 +4,18 @@ print(len(alpa))
 
 def encode(message , shift_num):
     encoded_message = ''
-
     for l in message:
         for i in range(0,26):
             if l == alpa[i]:
                 # l = alpa[i]
                 if i+shift_num >=26:
                     print(alpa[shift_num+i-26])
+                    encoded_message+=alpa[shift_num+i-26]
                 else:
                     print(alpa[i+shift_num])
+                    encoded_message += alpa[shift_num + i]
 
+    print(f'encoded message = {encoded_message}')
 
-
-encode('a',25)
+encode('hello',5)
 
