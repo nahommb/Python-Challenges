@@ -1,16 +1,20 @@
-# This is a sample Python script.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+alpa = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+print(len(alpa))
+
+def encode(message , shift_num):
+    encoded_message = ''
+
+    for l in message:
+        for i in range(0,26):
+            if l == alpa[i]:
+                # l = alpa[i]
+                if i+shift_num >=26:
+                    print(alpa[shift_num+i-26])
+                else:
+                    print(alpa[i+shift_num])
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
+encode('a',25)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
