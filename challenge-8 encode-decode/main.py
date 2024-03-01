@@ -30,4 +30,4 @@ if direction == 'encode':
 elif direction == 'decode':
     decode(message,shift_number)
 else:
-    print('wrong choice')
+    print('wrong conversion choice please correctly')
