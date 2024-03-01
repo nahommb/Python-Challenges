@@ -13,8 +13,21 @@ def encode(message , shift_num):
             encoded_message += alpa[shift_num + index_of_letter]
 
     print(f'encoded message = {encoded_message}')
-message = input("enter message\n")
+
+def decode(message,shift_num):
+    decoded_message = ''
+    for l in message:
+        index_of_letter = alpa.index(l)
+        decoded_message += alpa[index_of_letter-shift_num]
+
+    print(f'encoded message = {decoded_message}')
+direction = input("type 'encode' for encoding and 'decode' for decoding\n").lower()
+message = input("enter message\n").lower()
 shift_number = int(input('enter shift number\n'))
 
-encode(message = message,shift_num=shift_number)
-
+if direction == 'encode':
+    encode(message=message,shift_num=shift_number)
+elif direction == 'decode':
+    decode(message,shift_number)
+else:
+    print('wrong choice')
