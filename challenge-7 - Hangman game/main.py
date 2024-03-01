@@ -1,6 +1,6 @@
 import random
 
-word_list = ["neymar",'messi','ronaldo']
+word_list = ["neymar",'messi','ronaldo','suarez','roony']
 
 
 random_choose = random.choice(word_list)
