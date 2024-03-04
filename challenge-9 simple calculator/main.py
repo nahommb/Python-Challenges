@@ -1,16 +1,52 @@
-# This is a sample Python script.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def add(num1,num2):
+    print(num1 + num2)
+    return num1 + num2
+def sub(num1,num2):
+    print(num1 - num2)
+    return num1 - num2
+def mul(num1,num2):
+    print(num1*num2)
+    return num1 * num2
+def div(num1,num2):
+    print(num1 / num2)
+    return num1 / num2
+
+oprerations = {
+    "+":add,
+    "-":sub,
+    '*':mul,
+    '/':div
+}
+
+num1 = float(input('Enter First Number\n'))
+for symbol in oprerations:
+    print(symbol)
+user_choice = input('choice operation')
+num2 = float(input('Enter Second Number \n'))
+
+calc = oprerations[user_choice]
+calc(num1,num2)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
+next = True
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# while next:
+#     num1 = float(input('Enter First Number\n'))
+#     user_choice = input('choice operation')
+#     num2 = float(input('Enter Second Number \n'))
+#     result =0
+#     if user_choice =='+':
+#        result = add(num1, num2)
+#     elif user_choice =='-':
+#         result = sub(num1,num2)
+#     elif user_choice =='*':
+#        result = mul(num1,num2)
+#     elif user_choice =='/':
+#        result = div(num1,num2)
+#     else:
+#         print('invalid operator')
+#     can_cantin = input(f"Type 'y to continue calculating with {result} or 'n' to start new calaculation\n")
+#     if can_cantin == 'n':
+#         next = False
