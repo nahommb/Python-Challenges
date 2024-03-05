@@ -52,6 +52,12 @@ def play_game():
 
         if user_score == 0 or computer_score == 0 or user_score>21:
             isgame_over = True
+        else:
+            user_deal = input("Type 'Y' to get another card,Type 'n' to pass")
+            if user_deal == 'y':
+                user_card.append(deal_card())
+            else:
+                isgame_over = True
 
     while computer_score!=0 and computer_score <17:
         computer_card.append(deal_card())
@@ -60,11 +66,7 @@ def play_game():
     print(f'computer final hand = {computer_card} and score ={computer_score}')
     print(compare(user_score,computer_score))
 
-    user_deal = input("Type 'Y' to get another card,Type 'n' to pass")
-    if user_deal =='y':
-        user_card.append(deal_card())
-    else:
-        isgame_over = False
+
     while input('do you want to play game black jack y or n') == 'y':
         play_game()
 play_game()
