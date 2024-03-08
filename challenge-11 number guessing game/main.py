@@ -1,16 +1,16 @@
-# This is a sample Python script.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import random
+
+print('Welcom to number guessing game \n I am thinking number between 1 and 100 ')
+def_level = input('choose defficulty type "hard" or "esay" \n ')
+
+random_number = random.randint(1,100)
+
+def gues_chacker(random_num , num):
+    print(random_num)
+    if random_num == num:
+        print('yess')
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+gues_chacker(random_number,10)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
