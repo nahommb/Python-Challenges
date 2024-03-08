@@ -8,6 +8,7 @@ def_level = input('choose defficulty type "hard" or "esay" \n ')
 random_number = random.randint(1,100)
 
 def gues_chacker(random_num , user_geuss):
+
     if random_num == user_geuss:
        return True
 
@@ -29,11 +30,13 @@ while is_next_attempt and attempt > 0:
     if gues_chacker(random_number,guess_num):
         print(f'you got it! the number is {random_number}')
         is_next_attempt =False
+
     elif guess_num > random_number:
         print('Too high')
         print('Guess again')
         print(f'you have {attempt} left')
         attempt-=1
+        
     elif guess_num < random_number:
         print('Too low')
         print('Guess again')
