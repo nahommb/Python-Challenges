@@ -27,7 +27,7 @@ while is_next_attempt and attempt > 0:
     guess_num = int(input('Make a gues:'))
 
     if gues_chacker(random_number,guess_num):
-        print(f'you won the number is {random_number}')
+        print(f'you got it! the number is {random_number}')
         is_next_attempt =False
     elif guess_num > random_number:
         print('Too high')
