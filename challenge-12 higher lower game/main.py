@@ -41,21 +41,26 @@ def game():
     score = 0
     right = True
 
-    while right:
-        list_comp = gameGenerator()
+    first_person = gameGenerator()['A']
 
-        print(f"A : {list_comp['A']['name']}\n VS")
-        print(f"B : {list_comp['B']['name']}")
-        usre_chooese = input('who have more followers\n')
-        if list_comp['A']['followers']>list_comp['B']['followers'] and usre_chooese=='a':
+
+    while right:
+        second_person = gameGenerator()['B']
+        # nextPerson =
+        print(f"A : {first_person['name']}\n VS")
+        print(f"B : {second_person['name']}")
+        usre_chooese = input('who has more followers\n')
+        if first_person['followers'] >= second_person['followers'] and usre_chooese=='a':
             score+=1
             print(f'you get your score = {score}')
 
-        elif list_comp['B']['followers']>list_comp['A']['followers'] and usre_chooese=='b':
+        elif second_person['followers'] >= first_person['followers'] and usre_chooese=='b':
             score += 1
             print(f'you get your score = {score}')
+            first_person = second_person
         else:
             print(f'you lost your score = {score}')
             right =False
-        list_of_celeb.append(list_comp['A'])
+        list_of_celeb.append(first_person)
+
 game()
