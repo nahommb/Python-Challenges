@@ -1,6 +1,6 @@
 menu = {
    'espresso':{
-       'ingredient':{
+       'ingredients':{
                 'water':100,
                 'coffee':200
                      },
