@@ -1,15 +1,19 @@
 from turtle import Turtle, Screen
 
-tr = Turtle()
+
 sc = Screen()
 
 sc.setup(700,500)
 
 color = ['red','green','blue','black','pink','purple']
-tr.shape('turtle')
+position = [-100,-50,0,50,100,150]
 
-for i in range(7):
+
+for i in range(6):
+    tr = Turtle()
+    tr.shape('turtle')
     tr.color(color[i])
-    tr.goto()
+    tr.penup()
+    tr.goto(x=-270,y=position[i])
 
 sc.exitonclick()
