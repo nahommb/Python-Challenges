@@ -17,6 +17,9 @@ game_is_on = True
 
 sc.listen()
 sc.onkey(snake.up,'Up')
+sc.onkey(snake.down,'Down')
+sc.onkey(snake.left,'Left')
+sc.onkey(snake.right,'Right')
 
 
 
