@@ -40,10 +40,8 @@ while game_is_on:
     if snake.head.xcor()>340 or snake.head.xcor()<-340 or snake.head.ycor()>340 or snake.head.ycor()<-340:
         score_board.game_over()
         game_is_on = False
-    for segment in snake.segments:
-        if segment == snake.head:
-            pass
-        elif snake.head.distance(segment)<10:
+    for segment in snake.segments[1:]:
+        if snake.head.distance(segment)<10:
             game_is_on = False
             score_board.game_over()
 
