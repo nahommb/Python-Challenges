@@ -24,6 +24,14 @@ class Snake:
             new_y = self.segments[seg - 1].ycor()
             self.segments[seg].goto(new_x, new_y)
         self.segments[0].forward(20)
+    def add_segment(self,position):
+        new_segment = Turtle('square')
+        new_segment.color('white')
+        new_segment.penup()
+        new_segment.goto(position)
+        self.segments.append(new_segment)
+    def extend(self):
+        self.add_segment(self.segments[-1].position())
     def up(self):
         if self.head.heading()!= 270:
             self.head.setheading(90)
